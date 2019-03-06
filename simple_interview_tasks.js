@@ -61,13 +61,27 @@
 //
 // console.log(isSorted(arr1));
 
-//5 не знаю
-// function filter(arr,foo=(n)=>{})
-// {
-//     arr.forEach((item,i)=>{if (item)}
+// //5
+// function filter(arr,condition) {
+//     let result = [];
+//     for (let i = 0; i<arr.length-1; i++){
+//         if (condition(arr[i])) {result.push(arr[i])}
+//     }
+//     return result;
 // }
+//
+// console.log(filter([1, 2, 3, 4], n => n < 3) );
 
-//6 тоже самое
+// //6
+// function reduce(arr, foo, item) {
+//     let res = item;
+//     for (let i = 0; i<arr.length; i++){
+//         res = foo(res,arr[i])
+//     }
+//     return res
+// }
+//
+// console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0));
 
 // //7
 // function myReverse(arr) {
@@ -124,14 +138,31 @@
 // let a = [2,1,3,5];
 // console.log(missing(a));
 
-//11
+// //11
 // function isBalanced(str){
 //     let arr1 = str.match(/{/gi);
 //     let arr2 = str.match(/}/gi);
-//     return arr1.length === arr2.length;
+//     if (arr1.length === arr2.length){
+//         let strright = 0;
+//         let strleft = 0;
+//         for(let i = 0; i<str.length-1; i++) {
+//              if (str[i] == '{') {
+//                  if (str[i] == '}'){
+//                      strright++;
+//                  } else {
+//                      strleft++;
+//                  }
+//              }
+//              if (strright > strleft) {return false}
+//         }
+//         return true;
+//     }
+//     return false;
 // }
 //
-// let a ='foo { bar { baz } boo }';
-// let b = 'foo { bar } }';
+//
+// let a ='}{';
+// let b = 'foo {{{ bar } }';
 // console.log(isBalanced(a));
 // console.log(isBalanced(b));
+
